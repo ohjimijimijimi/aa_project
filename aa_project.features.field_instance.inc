@@ -22,7 +22,7 @@ function aa_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,7 +50,7 @@ function aa_project_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -61,14 +61,15 @@ function aa_project_field_default_field_instances() {
     'description' => 'Add one or more images.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
+        'label' => 'hidden',
+        'module' => 'picture',
         'settings' => array(
+          'fallback_image_style' => '',
           'image_link' => '',
-          'image_style' => '',
+          'picture_group' => 'aa_content',
         ),
-        'type' => 'image',
-        'weight' => 4,
+        'type' => 'picture',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -84,6 +85,12 @@ function aa_project_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'preview-breakpoints_theme_aa_theme_mobile_1x' => 0,
+          'preview-breakpoints_theme_aa_theme_normal_1x' => 0,
+        ),
+      ),
       'file_directory' => 'images/project',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -96,6 +103,27 @@ function aa_project_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 'plupload',
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -123,16 +151,11 @@ This field will be rendered as a link to Google Maps. <br />
 Remember, the <em>Full name</em> part of the address will be used as the link title. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'addressfield',
-        'settings' => array(
-          'format_handlers' => array(
-            0 => 'address',
-          ),
-          'use_widget_handlers' => 1,
-        ),
-        'type' => 'addressfield_default',
-        'weight' => 3,
+        'label' => 'inline',
+        'module' => 'addressfield_map_formatter',
+        'settings' => array(),
+        'type' => 'addressfield_map_formatter',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -175,9 +198,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -219,9 +241,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -257,12 +278,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'teaser' => array(
@@ -279,6 +296,12 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'epsacrop' => array(
+        'styles' => array(
+          'preview-breakpoints_theme_aa_theme_mobile_1x' => 'preview-breakpoints_theme_aa_theme_mobile_1x',
+          'preview-breakpoints_theme_aa_theme_normal_1x' => 'preview-breakpoints_theme_aa_theme_normal_1x',
+        ),
+      ),
       'file_directory' => 'images/project/preview',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -291,6 +314,20 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -308,9 +345,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'teaser' => array(
@@ -347,11 +383,11 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'description' => 'Add a comma separated list of roles covered during the project.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -375,7 +411,43 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 2,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-project-field_type'
+  $field_instances['node-project-field_type'] = array(
+    'bundle' => 'project',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Choose the project type.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_type',
+    'label' => 'Type',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
     ),
   );
 
@@ -388,9 +460,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 12,
       ),
       'teaser' => array(
@@ -422,21 +493,20 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
   // Exported field_instance: 'node-project-field_upcoming_date'
   $field_instances['node-project-field_upcoming_date'] = array(
     'bundle' => 'project',
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Add a date for the upcoming project.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
+        'module' => 'partial_date',
         'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
         ),
-        'type' => 'date_default',
-        'weight' => 13,
+        'type' => 'partial_date_default',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -450,24 +520,57 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'label' => 'Date',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'blank',
-      'default_value_code' => '',
-      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
+      'module' => 'partial_date',
       'settings' => array(
-        'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 'hour',
+            'minute' => 'minute',
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 0,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'site',
       ),
-      'type' => 'date_popup',
+      'type' => 'partial_date',
       'weight' => 16,
     ),
   );
@@ -485,9 +588,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
       'teaser' => array(
@@ -524,9 +626,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
         'settings' => array(),
-        'type' => 'link_default',
+        'type' => 'hidden',
         'weight' => 14,
       ),
       'teaser' => array(
@@ -553,9 +654,9 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'optional',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Info',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -578,9 +679,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
       'teaser' => array(
@@ -658,11 +758,11 @@ Each video must be an embedded code provided by an external resource as YouTube,
     'description' => 'Add a comma separated list of years. For example insert <em>2013</em> if the project period covers the year 2013, or <em>2012, 2013</em> if the project period covers two years.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -686,7 +786,51 @@ Each video must be an embedded code provided by an external resource as YouTube,
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 3,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-types-field_type_color'
+  $field_instances['taxonomy_term-types-field_type_color'] = array(
+    'bundle' => 'types',
+    'default_value' => array(
+      0 => array(
+        'value' => '#000000',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_type_color',
+    'label' => 'Color RGB code',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 41,
     ),
   );
 
@@ -694,7 +838,6 @@ Each video must be an embedded code provided by an external resource as YouTube,
   // Included for use with string extractors like potx.
   t('Add a comma separated list of roles covered during the project.');
   t('Add a comma separated list of years. For example insert <em>2013</em> if the project period covers the year 2013, or <em>2012, 2013</em> if the project period covers two years.');
-  t('Add a date for the upcoming project.');
   t('Add a link for the upcoming project.');
   t('Add a short description.');
   t('Add a title for the preview.');
@@ -705,6 +848,8 @@ Each video must be an embedded code provided by an external resource as YouTube,
 Each video must be an embedded code provided by an external resource as YouTube, Vimeo, ecc. ');
   t('Body');
   t('Caption');
+  t('Choose the project type.');
+  t('Color RGB code');
   t('Date');
   t('Enable preview');
   t('Enable upcoming');
@@ -720,6 +865,7 @@ This field will be rendered as a link to Google Maps. <br />
 Remember, the <em>Full name</em> part of the address will be used as the link title. ');
   t('Roles');
   t('Title');
+  t('Type');
   t('VIdeos');
   t('Years');
 
