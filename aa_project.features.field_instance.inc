@@ -22,7 +22,7 @@ function aa_project_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -66,7 +66,7 @@ function aa_project_field_default_field_instances() {
         'settings' => array(
           'fallback_image_style' => '',
           'image_link' => '',
-          'picture_group' => 'aa_content',
+          'picture_group' => 'aa_project_content',
         ),
         'type' => 'picture',
         'weight' => 0,
@@ -155,7 +155,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'module' => 'addressfield_map_formatter',
         'settings' => array(),
         'type' => 'addressfield_map_formatter',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -200,7 +200,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -243,7 +243,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -280,7 +280,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -347,7 +347,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -387,7 +387,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -462,7 +462,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -498,15 +498,87 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'partial_date',
         'settings' => array(
-          'component_settings' => array(),
-          'format' => 'medium',
+          'component_settings' => array(
+            'components' => array(
+              'approx' => array(
+                'value' => '',
+                'weight' => -1,
+              ),
+              'c1' => array(
+                'value' => '',
+                'weight' => 7,
+              ),
+              'c2' => array(
+                'value' => '',
+                'weight' => 8,
+              ),
+              'c3' => array(
+                'value' => '',
+                'weight' => 9,
+              ),
+              'day' => array(
+                'empty' => '',
+                'format' => 'j',
+                'weight' => 2,
+              ),
+              'hour' => array(
+                'empty' => '',
+                'format' => 'G',
+                'weight' => 3,
+              ),
+              'minute' => array(
+                'empty' => '',
+                'format' => 'i',
+                'weight' => 4,
+              ),
+              'month' => array(
+                'empty' => '',
+                'format' => 'M',
+                'weight' => 1,
+              ),
+              'second' => array(
+                'empty' => '',
+                'format' => 's',
+                'weight' => 5,
+              ),
+              'timezone' => array(
+                'empty' => '',
+                'format' => 'T',
+                'weight' => 6,
+              ),
+              'year' => array(
+                'empty' => '',
+                'format' => 'Y',
+                'weight' => 0,
+              ),
+            ),
+            'display' => array(
+              'day' => 'estimate_label',
+              'hour' => 'estimate_label',
+              'minute' => 'estimate_label',
+              'month' => 'estimate_label',
+              'second' => 'estimate_label',
+              'timezone' => 'date_only',
+              'year' => 'estimate_label',
+            ),
+            'meridiem' => 'a',
+            'separator' => array(
+              'date' => ' ',
+              'datetime' => ' ',
+              'other' => ' ',
+              'range' => '',
+              'time' => ':',
+            ),
+            'year_designation' => 'ce',
+          ),
+          'format' => 'custom',
           'use_override' => 'none',
         ),
         'type' => 'partial_date_default',
-        'weight' => 16,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -590,7 +662,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -681,7 +753,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -718,11 +790,11 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
 Each video must be an embedded code provided by an external resource as YouTube, Vimeo, ecc. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -762,7 +834,7 @@ Each video must be an embedded code provided by an external resource as YouTube,
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
