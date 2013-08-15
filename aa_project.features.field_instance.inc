@@ -298,8 +298,8 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
-          'preview-breakpoints_theme_aa_theme_mobile_1x' => 'preview-breakpoints_theme_aa_theme_mobile_1x',
-          'preview-breakpoints_theme_aa_theme_normal_1x' => 'preview-breakpoints_theme_aa_theme_normal_1x',
+          'project_preview_breakpoints_theme_aa_theme_mobile_1x' => 'project_preview_breakpoints_theme_aa_theme_mobile_1x',
+          'project_preview_breakpoints_theme_aa_theme_normal_1x' => 'project_preview_breakpoints_theme_aa_theme_normal_1x',
         ),
       ),
       'file_directory' => 'images/project/preview',
@@ -315,7 +315,14 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
       'module' => 'image',
       'settings' => array(
         'filefield_sources' => array(
-          'filefield_sources' => array(),
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'plupload' => 0,
+            'reference' => 0,
+            'remote' => 0,
+            'upload' => 'upload',
+          ),
           'source_attach' => array(
             'absolute' => 0,
             'attach_mode' => 'move',

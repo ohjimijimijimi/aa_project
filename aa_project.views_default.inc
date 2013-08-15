@@ -49,7 +49,7 @@ function aa_project_views_default_views() {
   $handler->display->display_options['fields']['field_preview_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_preview_image']['type'] = 'picture';
   $handler->display->display_options['fields']['field_preview_image']['settings'] = array(
-    'picture_group' => 'aa_theme',
+    'picture_group' => 'aa_project_preview',
     'fallback_image_style' => '',
     'image_link' => 'content',
   );
