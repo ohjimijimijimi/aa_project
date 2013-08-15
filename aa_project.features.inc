@@ -30,6 +30,38 @@ function aa_project_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_fe_nodequeue_export_fields().
+ */
+function aa_project_fe_nodequeue_export_fields() {
+  $nodequeues = array();
+
+  // Exported nodequeues: preview
+  $nodequeues['preview'] = array(
+    'name' => 'preview',
+    'title' => 'Preview',
+    'subqueue_title' => '',
+    'size' => 3,
+    'link' => 'add to preview',
+    'link_remove' => 'remove from preview',
+    'owner' => 'nodequeue',
+    'show_in_ui' => 1,
+    'show_in_tab' => 1,
+    'show_in_links' => 1,
+    'reference' => 0,
+    'reverse' => 0,
+    'i18n' => 0,
+    'subqueues' => 1,
+    'types' => array(
+      0 => 'project',
+    ),
+    'roles' => array(),
+    'count' => 0,
+  );
+
+  return $nodequeues;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function aa_project_image_default_styles() {
