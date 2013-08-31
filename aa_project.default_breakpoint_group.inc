@@ -12,8 +12,8 @@ function aa_project_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = '';
-  $breakpoints[] = '';
+  $breakpoints[] = 'custom.aa_theme.mobile';
+  $breakpoints[] = 'custom.aa_theme.normal';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
@@ -28,8 +28,8 @@ function aa_project_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = '';
-  $breakpoints[] = '';
+  $breakpoints[] = 'custom.aa_theme.mobile';
+  $breakpoints[] = 'custom.aa_theme.normal';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();

@@ -16,10 +16,10 @@ function aa_project_default_picture_mapping() {
   $picture_mapping->machine_name = 'aa_project_content';
   $picture_mapping->breakpoint_group = 'aa_project_content';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.aa_theme.mobile' => array(
+    'custom.aa_theme.mobile' => array(
       '1x' => 'project_content_breakpoints_theme_aa_theme_mobile_1x',
     ),
-    'breakpoints.theme.aa_theme.normal' => array(
+    'custom.aa_theme.normal' => array(
       '1x' => 'project_content_breakpoints_theme_aa_theme_normal_1x',
     ),
   );
@@ -31,10 +31,10 @@ function aa_project_default_picture_mapping() {
   $picture_mapping->machine_name = 'aa_project_preview';
   $picture_mapping->breakpoint_group = 'aa_project_preview';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.aa_theme.mobile' => array(
+    'custom.aa_theme.mobile' => array(
       '1x' => 'project_preview_breakpoints_theme_aa_theme_mobile_1x',
     ),
-    'breakpoints.theme.aa_theme.normal' => array(
+    'custom.aa_theme.normal' => array(
       '1x' => 'project_preview_breakpoints_theme_aa_theme_normal_1x',
     ),
   );

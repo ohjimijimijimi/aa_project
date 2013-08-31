@@ -65,6 +65,42 @@ function aa_project_uuid_features_default_terms() {
     'metatags' => array(),
   );
   $terms[] = array(
+    'name' => 'Stylist',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => '8c7d3c0c-c9e4-4a73-98d8-892cd081b319',
+    'vocabulary_machine_name' => 'types',
+    'field_type_color' => array(
+      'und' => array(
+        0 => array(
+          'value' => '#000000',
+          'format' => NULL,
+          'safe_value' => '#000000',
+        ),
+      ),
+    ),
+    'metatags' => array(),
+  );
+  $terms[] = array(
+    'name' => 'Tailored',
+    'description' => '',
+    'format' => 'filtered_html',
+    'weight' => 0,
+    'uuid' => 'cb27e13f-6c72-4d2f-9a9f-2bc1d3d3aaac',
+    'vocabulary_machine_name' => 'types',
+    'field_type_color' => array(
+      'und' => array(
+        0 => array(
+          'value' => '#000000',
+          'format' => NULL,
+          'safe_value' => '#000000',
+        ),
+      ),
+    ),
+    'metatags' => array(),
+  );
+  $terms[] = array(
     'name' => 'Cinema',
     'description' => '',
     'format' => 'plain_text',

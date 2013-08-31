@@ -83,7 +83,7 @@ function aa_project_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => 720,
-          'height' => 720,
+          'height' => '',
           'upscale' => 1,
         ),
         'weight' => 1,
@@ -107,7 +107,7 @@ function aa_project_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => 669,
-          'height' => 669,
+          'height' => '',
           'upscale' => 1,
         ),
         'weight' => 1,
