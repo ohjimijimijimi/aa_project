@@ -27,7 +27,8 @@ function aa_project_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -200,11 +201,101 @@ function aa_project_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Date */
+  /* Field: Content: Date - Month */
+  $handler->display->display_options['fields']['field_upcoming_date_1']['id'] = 'field_upcoming_date_1';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['table'] = 'field_data_field_upcoming_date';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['field'] = 'field_upcoming_date';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['ui_name'] = 'Content: Date - Month';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_upcoming_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_upcoming_date_1']['click_sort_column'] = 'timestamp';
+  $handler->display->display_options['fields']['field_upcoming_date_1']['settings'] = array(
+    'use_override' => 'none',
+    'format' => 'custom',
+    'component_settings' => array(
+      'meridiem' => 'a',
+      'year_designation' => 'ce',
+      'display' => array(
+        'year' => 'none',
+        'month' => 'date_or',
+        'day' => 'none',
+        'hour' => 'none',
+        'minute' => 'none',
+        'second' => 'none',
+        'timezone' => 'none',
+      ),
+      'separator' => array(
+        'date' => ' ',
+        'time' => ':',
+        'datetime' => ' ',
+        'other' => ' ',
+        'range' => '',
+      ),
+      'components' => array(
+        'year' => array(
+          'format' => 'Y-ce',
+          'empty' => '',
+          'weight' => '0',
+        ),
+        'month' => array(
+          'format' => 'M',
+          'empty' => '',
+          'weight' => '1',
+        ),
+        'day' => array(
+          'format' => 'j-S',
+          'empty' => '',
+          'weight' => '2',
+        ),
+        'hour' => array(
+          'format' => 'h',
+          'empty' => '',
+          'weight' => '3',
+        ),
+        'minute' => array(
+          'format' => 'i',
+          'empty' => '',
+          'weight' => '4',
+        ),
+        'second' => array(
+          'format' => 's',
+          'empty' => '',
+          'weight' => '5',
+        ),
+        'timezone' => array(
+          'format' => 'T',
+          'empty' => '',
+          'weight' => '6',
+        ),
+        'c1' => array(
+          'value' => '',
+          'weight' => '7',
+        ),
+        'c2' => array(
+          'value' => '',
+          'weight' => '8',
+        ),
+        'c3' => array(
+          'value' => '',
+          'weight' => '9',
+        ),
+        'approx' => array(
+          'value' => '',
+          'weight' => '-1',
+        ),
+      ),
+    ),
+  );
+  /* Field: Content: Date - Year */
   $handler->display->display_options['fields']['field_upcoming_date']['id'] = 'field_upcoming_date';
   $handler->display->display_options['fields']['field_upcoming_date']['table'] = 'field_data_field_upcoming_date';
   $handler->display->display_options['fields']['field_upcoming_date']['field'] = 'field_upcoming_date';
+  $handler->display->display_options['fields']['field_upcoming_date']['ui_name'] = 'Content: Date - Year';
   $handler->display->display_options['fields']['field_upcoming_date']['label'] = '';
+  $handler->display->display_options['fields']['field_upcoming_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_upcoming_date']['alter']['text'] = '<div class="date-year">[field_upcoming_date]</div>
+<div class="date-month">[field_upcoming_date_1]</div>';
   $handler->display->display_options['fields']['field_upcoming_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_upcoming_date']['click_sort_column'] = 'timestamp';
   $handler->display->display_options['fields']['field_upcoming_date']['settings'] = array(
@@ -214,13 +305,13 @@ function aa_project_views_default_views() {
       'meridiem' => 'a',
       'year_designation' => 'ce',
       'display' => array(
-        'year' => 'estimate_label',
-        'month' => 'estimate_label',
-        'day' => 'estimate_label',
-        'hour' => 'estimate_label',
-        'minute' => 'estimate_label',
-        'second' => 'estimate_label',
-        'timezone' => 'date_only',
+        'year' => 'date_or',
+        'month' => 'none',
+        'day' => 'none',
+        'hour' => 'none',
+        'minute' => 'none',
+        'second' => 'none',
+        'timezone' => 'none',
       ),
       'separator' => array(
         'date' => ' ',

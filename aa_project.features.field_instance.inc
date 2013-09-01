@@ -735,7 +735,7 @@ Remember, the <em>Full name</em> part of the address will be used as the link ti
       'rel_remove' => 'default',
       'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => 'Info',
+      'title_value' => 'more',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,

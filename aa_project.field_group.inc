@@ -34,7 +34,7 @@ function aa_project_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-content field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -61,7 +61,7 @@ function aa_project_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-images field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -88,7 +88,7 @@ function aa_project_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-location field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -118,7 +118,7 @@ function aa_project_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-preview field-group-tab',
         'required_fields' => 1,
       ),
     ),
@@ -146,12 +146,13 @@ function aa_project_field_group_info() {
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Upcoming',
       'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => ' group-upcoming field-group-tab',
         'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_upcoming|node|project|form'] = $field_group;
@@ -176,7 +177,7 @@ function aa_project_field_group_info() {
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => ' group-videos field-group-tab',
         'required_fields' => 1,
       ),
     ),

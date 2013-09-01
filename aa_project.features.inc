@@ -40,7 +40,7 @@ function aa_project_fe_nodequeue_export_fields() {
     'name' => 'preview',
     'title' => 'Preview',
     'subqueue_title' => '',
-    'size' => 3,
+    'size' => 0,
     'link' => 'add to preview',
     'link_remove' => 'remove from preview',
     'owner' => 'nodequeue',
